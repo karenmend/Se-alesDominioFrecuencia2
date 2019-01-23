@@ -235,10 +235,12 @@ namespace GraficadorSeñales
 					if (indiceActual > (double)transformada.Muestras.Count / 2.0)
 						break;
 				}
+                double frecuenciaFundamental = (double)indiceMaximo * señal.FrecuenciaMuestreo / (double)transformada.Muestras.Count;
+                lblHertz.Text = frecuenciaFundamental.ToString() + " Hz";
+
             }
 
-	
-
+	      
             plnEjeXResultado.Points.Clear();
             //Punto del principio
             plnEjeXResultado.Points.Add(new Point(0, (scrContenedor_Resultado.Height / 2)));
